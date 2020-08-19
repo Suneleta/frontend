@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html class=" -webkit-">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+  <!-- HOSTED -->
+  <style media="" data-href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,600italic,300italic,400italic,300,700italic,800italic,800"></style>   
+  <style media="all" data-href="fonts/mdi/css/materialdesignicons.min.css"></style>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- HOSTED -->
+  <script src="lib/prefixfree.min.js"></script>
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/jquery.mixitup.min.js"></script>
+  <script src="lib/jquery.waypoints.min.js"></script>
+
+  <!-- LOCAL -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+
+</head>
+
+<body class="">
+  <div class="overflow-wrap">
+    <!-- HOME -->
+    <div class="modal-wrap flex">
+      <div class="mask"></div>
+      <div class="modal" id="modal" style="max-width: 700px;">
+        <div class="carousel-wrap" style="width: 700px;">
+          <div class="window">
+            <div id="carousel" style="left: -700px;">
+              <div class="slide" style="width: 700px;"></div>
+              <div class="slide" style="width: 700px;"></div>
+              <div class="slide" style="width: 700px;"></div>
+            </div>
+            <i class="mdi mdi-chevron-left" id="prev"></i>
+            <i class="mdi mdi-chevron-right" id="next"></i>
+          </div>
+        </div>
+        <div class="info-box">
+          <div class="title"></div>
+          <div class="tag"></div>
+          <div class="detail"></div>
+          <a href="#" target="_blank">
+            <div class="button">
+              <i class="mdi mdi-open-in-new"></i>VIEW SITE
+            </div>
+          </a>
+        </div>
+        <i class="close mdi mdi-close"></i>
+      </div>
+    </div>
+
+    <section id="home" class="flex height-fix">
+      <div id="container">
+      </div>
+      <div class="flex">
+        <div class="text">
+          Hello, I'm <span class="highlight">Eleni Taki</span>.
+          <br>
+          I'm a front-end developer.
+        </div>
+
+        <div class="button page-link" dest="about">
+          View my work <i class="mdi mdi-arrow-right"></i>
+        </div>
+
+        <nav class="flex desk">
+          <div class="link-wrap">
+            <div class="page-link active" dest="home">home</div>
+            <div class="page-link" dest="about">about</div>
+            <div class="page-link" dest="portfolio">portfolio</div>
+            <div class="page-link" dest="contact">contact</div>
+          </div>
+          <i class="mdi mdi-menu"></i>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container flex">
+        <div class="header waypoint animated slide-in-left" data-animation="slide-in-left">
+          ABOUT
+        </div>
+        <div class="header-bar waypoint animated slide-in-left" data-animation="slide-in-left" data-delay=".5s"
+          style="animation-delay: 0.5s;"></div>
+
+        <div class="flex row label-wrap">
+          <div class="flex row-gt-sm">
+            <div class="flex bullet-wrap ">
+              <div class="hex-wrap waypoint animated flip-in-x" data-animation="flip-in-x">
+                <img src="./images/idea.svg">
+              </div>
+              <div class="waypoint animated fade-in" data-animation="fade-in">
+                <div class="label bold">Fast</div>
+                <div>
+                  Fast load times and lag free interaction, my highest
+                  priority.
+                </div>
+              </div>
+            </div>
+
+            <div class="flex bullet-wrap ">
+              <div class="hex-wrap waypoint animated flip-in-x" data-animation="flip-in-x" data-delay=".2s"
+                style="animation-delay: 0.2s;">
+                <img src="./images/speed.svg">
+              </div>
+              <div class="waypoint animated fade-in" data-animation="fade-in" data-delay=".2s"
+                style="animation-delay: 0.2s;">
+                <div class="label bold">Responsive</div>
+                <div>Creating layouts that adjust to any device.</div>
+              </div>
+            </div>
+          </div>
+          <div class="flex row-gt-sm">
+            <div class="flex bullet-wrap ">
+              <div class="hex-wrap waypoint animated flip-in-x" data-animation="flip-in-x" data-delay=".4s"
+                style="animation-delay: 0.4s;">
+                <img src="./images/user-interface.svg">
+              </div>
+              <div class="waypoint animated fade-in" data-animation="fade-in" data-delay=".4s"
+                style="animation-delay: 0.4s;">
+                <div class="label bold">Intuitive</div>
+                <div>Always on the side of easy-to-use, intuitive UX/UI. </div>
+              </div>
+            </div>
+
+            <div class="flex bullet-wrap ">
+              <div class="hex-wrap waypoint animated flip-in-x" data-animation="flip-in-x" data-delay=".6s"
+                style="animation-delay: 0.6s;">
+                <img src="./images/flower.svg">
+
+              </div>
+              <div class="waypoint animated fade-in" data-animation="fade-in" data-delay=".6s"
+                style="animation-delay: 0.6s;">
+                <div class="label bold">Dynamic</div>
+                <div>
+                  Interactive websites with a flair that draw the attention and do the job.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-wrapper flex row-gt-sm">
+          <div class="flex flex-50-gt-sm waypoint animated slide-in-left" data-animation="slide-in-left">
+            <img src="./images/profile.png" class="me">
+            <!-- <div><img class="up-arrow" src="img/up-arrow.png"></div> -->
+            <div class="label bold">Who's this in the picture?</div>
+            <div>
+              I'm a Front-End Developer for
+              <a class="highlight" href="http://www.newshore.es/" target="_blank">Newshore</a>, a company creating IT solutions for the airline industry
+              in Barcelona, Spain.
+              <br>
+              I love creating dynamic, strong  and intuitive UI experiences, using the latest technology.
+              <br>
+              <span class="page-link highlight" dest="contact">Let's create something together.</span>
+            </div>
+          </div>
+
+          <div class="flex flex-50-gt-sm waypoint bars-wrap animated slide-in-right" data-animation="slide-in-right">
+            <div class="bar flex">
+              <div class="bar fill" style="width:90%">
+                <div class="tag bold flex">CSS</div>
+              </div>
+              <span>90%</span>
+            </div>
+
+            <div class="bar flex">
+              <div class="bar fill" style="width:90%">
+                <div class="tag bold flex">HTML</div>
+              </div>
+              <span>90%</span>
+            </div>
+
+            <div class="bar flex">
+              <div class="bar fill" style="width:80%">
+                <div class="tag bold flex">JavaScript</div>
+              </div>
+              <span>80%</span>
+            </div>
+
+            <div class="bar flex">
+              <div class="bar fill" style="width:80%">
+                <div class="tag bold flex">React</div>
+              </div>
+              <span>80%</span>
+            </div>
+
+            <div class="bar flex">
+              <div class="bar fill" style="width:80%">
+                <div class="tag bold flex">Vue.js</div>
+              </div>
+              <span>80%</span>
+            </div>
+
+            <div class="bar flex">
+              <div class="bar fill" style="width:60%">
+                <div class="tag bold flex">Angular</div>
+              </div>
+              <span>60%</span>
+            </div>
+
+            <div class="bar flex">
+              <div class="bar fill" style="width:60%">
+                <div class="tag bold flex">Node.js</div>
+              </div>
+              <span>60%</span>
+            </div>
+
+            <div class="bar flex">
+              <div class="bar fill" style="width:60%">
+                <div class="tag bold flex">UI Design</div>
+              </div>
+              <span>60%</span>
+            </div>
+
+            <div class="bar flex">
+              <div class="bar fill" style="width:60%">
+                <div class="tag bold flex">Illustrator</div>
+              </div>
+              <span>60%</span>
+            </div>
+
+            <div class="bar flex">
+              <div class="bar fill" style="width:60%">
+                <div class="tag bold flex">Sketch</div>
+              </div>
+              <span>60%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="flex" id="portfolio">
+      <div class="header waypoint animated slide-in-right" data-animation="slide-in-right">
+        PROJECTS
+      </div>
+      <div class="header-bar waypoint animated slide-in-right" data-animation="slide-in-right" data-delay=".3s"
+        style="animation-delay: 0.3s;"></div>
+
+      <div id="gallery" class="container flex row wrap animated">
+        <div class="mix react" data-my-order="1" style="display: inline-block;" data-bound="">
+          <div>
+            <div class="card"></div>
+            <div class="text">
+              <div class="bold">Vueling Airlines</div>
+              <span class="highlight">HTML / SCSS / Vue.Js / Angular</span>
+            </div>
+            <div class="button" id="vueling">LEARN MORE</div>
+          </div>
+        </div>
+
+        <div class="mix react" data-my-order="1" style="display: inline-block;" data-bound="">
+          <div>
+            <div class="card"></div>
+            <div class="text">
+              <div class="bold">SwapSkills</div>
+              <span class="highlight">React / Firebase</span>
+            </div>
+            <div class="button" id="swapskills">LEARN MORE</div>
+          </div>
+        </div>
+
+        <div class="mix react" data-my-order="1" style="display: inline-block;" data-bound="">
+          <div>
+            <div class="card"></div>
+            <div class="text">
+              <div class="bold">UXAvant</div>
+              <span class="highlight">HTML / SCSS</span>
+            </div>
+            <div class="button" id="uxavant">LEARN MORE</div>
+          </div>
+        </div>
+
+        <div class="mix js" data-my-order="1" style="display: inline-block;" data-bound="">
+          <div>
+            <div class="card"></div>
+            <div class="text">
+              <div class="bold">Movies Filter</div>
+              <span class="highlight">React</span>
+            </div>
+            <div class="button" id="movies">LEARN MORE</div>
+          </div>
+        </div>
+
+        <div class="mix rails" data-my-order="1" style="display: inline-block;" data-bound="">
+          <div>
+            <div class="card"></div>
+            <div class="text">
+              <div class="bold">Choose your beer</div>
+              <span class="highlight">Js</span>
+            </div>
+            <div class="button" id="beers">LEARN MORE</div>
+          </div>
+        </div>
+        <div class="mix rails" data-my-order="1" style="display: inline-block;" data-bound="">
+          <div>
+            <div class="card"></div>
+            <div class="text">
+              <div class="bold">Travelmate</div>
+              <span class="highlight">UI Design / Sketch / InVision</span>
+            </div>
+            <div class="button" id="travelmate">LEARN MORE</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact">
+      <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1"
+        xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
+        <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
+      </svg>
+      <div class="container flex">
+        <div class="header waypoint animated slide-in-left" data-animation="slide-in-left">
+          CONTACT
+        </div>
+        <div class="header-bar waypoint animated slide-in-right" data-animation="slide-in-right" data-delay=".25s"
+          style="animation-delay: 0.25s;"></div>
+          <h2>Have a question or interested in doing a project together?</h2>
+          <a class="button page-link" dest="contact" href="mailto:elenhtakh@gmail.com">
+            Email me
+          </a>
+      </div>
+    </section>
+
+    <footer>
+      <i class="mdi mdi-chevron-double-up page-link" dest="home"></i>
+
+      <div class="icon-wrap flex row">
+        <a href="https://www.linkedin.com/in/eleni-taki/">
+          <div class="flex icon" id="icon-2">
+            <i class="mdi mdi-linkedin"></i>
+          </div>
+        </a>
+        <a href="https://github.com/Suneleta">
+          <div class="flex icon" id="icon-3">
+            <i class="mdi mdi-github-box"></i>
+          </div>
+        </a>
+        <a href="https://www.codewars.com/users/Suneleta">
+          <div class="flex icon" id="icon-3">
+            <i class="mdi mdi-code-array"></i>
+          </div>
+        </a>
+      </div>
+      <div class="info-box">
+        <div class="footnote">
+          ELENI TAKI <span class="highlight" id="footer-date"></span>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="lib/sketch.min.js"></script>
+  <script src="scripts/tentacles.js"></script>
+  <script src="scripts/index.js"></script>
+</body>
+</html>
