@@ -8399,4 +8399,7 @@
     section:nth-of-type(3) .highlight {
       color:#ffa500;
     }
+    #preload {
+      display:none;
+    }
   
