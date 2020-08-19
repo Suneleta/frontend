@@ -8396,5 +8396,7 @@
     #container {
         cursor: pointer;
     }
-    
+    section:nth-of-type(3) .highlight {
+      color:#ffa500;
+    }
   
