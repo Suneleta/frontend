@@ -1,4 +1,47 @@
 $(function() {
+  // SCROLL ANIMATIONS
+  function onScrollInit(items, elemTrigger) {
+    var offset = $(window).height() / 2;
+    items.each(function() {
+      var elem = $(this),
+        animationClass = elem.attr('data-animation'),
+        animationDelay = elem.attr('data-delay');
+
+      elem.css({
+        '-webkit-animation-delay': animationDelay,
+        '-moz-animation-delay': animationDelay,
+        'animation-delay': animationDelay
+      });
+
+      var trigger = elemTrigger ? trigger : elem;
+
+      trigger.waypoint(
+        function() {
+          elem.addClass('animated').addClass(animationClass);
+          if (elem.get(0).id === 'gallery') mixClear(); //OPTIONAL
+        },
+        {
+          triggerOnce: true,
+          offset: offset
+        }
+      );
+    });
+  }
+    // GALLERY
+    $('#gallery').mixItUp({});
+
+    function mixClear() {
+      setTimeout(function() {
+        $('#gallery').removeClass('waypoint');
+      }, 2000);
+    }
+  
+    setTimeout(function() {
+      onScrollInit($('.waypoint'));
+    }, 10);
+
+  /*FILL MODAL WITH INFO */
+  
   function fillModal(id) {
     $('#modal .title').text(modalText[id].title);
     $('#modal .detail').text(modalText[id].detail);
@@ -162,12 +205,6 @@ function setDimensions() {
       $(this).height(h);
     });
   }
-
-  // RESIZE RESETS
-  $(window).resize(function() {
-    posFilterBar($('.filter').first());
-  });
-
   // Sticky Nav on Mobile
   if (isMobile) {
     $('nav').addClass('fixed');
@@ -204,9 +241,6 @@ function setDimensions() {
     }
     if (pos2 > $('#portfolio').offset().top) {
       highlightLink('portfolio');
-    }
-    if (pos2 > $('#blog').offset().top) {
-      highlightLink('blog');
     }
     if (
       pos2 > $('#contact').offset().top ||
@@ -254,79 +288,5 @@ function setDimensions() {
   $('.mdi-menu').click(function() {
     $('.link-wrap').toggleClass('visible');
   });
-
-  $('.blog-wrap').hover(
-    function() {
-      $('.blog-wrap')
-        .not(this)
-        .addClass('fade');
-      $(this).addClass('hover');
-    },
-    function() {
-      $(this).removeClass('hover');
-      $('.blog-wrap').removeClass('fade');
-    }
-  );
-
-  posFilterBar($('.filter').first());
-
-  $('.filter').click(function() {
-    posFilterBar(this);
-  });
-
-  function posFilterBar(elem) {
-    var origin = $(elem)
-      .parent()
-      .offset().left;
-    var pos = $(elem).offset().left;
-    $('.float-bar').css({
-      left: pos - origin,
-      width: $(elem).innerWidth()
-    });
-    $('.float-bar .row').css('left', (pos - origin) * -1);
-  }
-
-  // GALLERY
-  $('#gallery').mixItUp({});
-
-  function mixClear() {
-    setTimeout(function() {
-      $('#gallery').removeClass('waypoint');
-    }, 2000);
-  }
-
-  // SCROLL ANIMATIONS
-  function onScrollInit(items, elemTrigger) {
-    var offset = $(window).height() / 1.6;
-    items.each(function() {
-      var elem = $(this),
-        animationClass = elem.attr('data-animation'),
-        animationDelay = elem.attr('data-delay');
-
-      elem.css({
-        '-webkit-animation-delay': animationDelay,
-        '-moz-animation-delay': animationDelay,
-        'animation-delay': animationDelay
-      });
-
-      var trigger = elemTrigger ? trigger : elem;
-
-      trigger.waypoint(
-        function() {
-          elem.addClass('animated').addClass(animationClass);
-          if (elem.get(0).id === 'gallery') mixClear(); //OPTIONAL
-        },
-        {
-          triggerOnce: true,
-          offset: offset
-        }
-      );
-    });
-  }
-
-  setTimeout(function() {
-    onScrollInit($('.waypoint'));
-  }, 10);
-
 
 });
