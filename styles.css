@@ -8402,4 +8402,7 @@
     #preload {
       display:none;
     }
-  
+    section:nth-of-type(4) h2 {
+      text-align: center;
+      line-height: 1.5;
+    }
