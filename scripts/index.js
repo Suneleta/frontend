@@ -1,7 +1,7 @@
 $(function() {
   // SCROLL ANIMATIONS
   function onScrollInit(items, elemTrigger) {
-    var offset = $(window).height() / 2;
+    var offset = $(window).height() / 1;
     items.each(function() {
       var elem = $(this),
         animationClass = elem.attr('data-animation'),
@@ -75,7 +75,7 @@ $(function() {
       title: 'SwapSkills',
       tag: 'INTERCHANGING SERVICES APP FOR THE COMMUNITY',
       detail:
-        'SwapSkills is an app to help interchanging services in the neighbourhoods of Barcelona. The target is to serve people´s needs easily and help create social bonds that contribute to better everyday life and the overall happiness of the individual.',
+        'SwapSkills is an app to help interchanging services in the neighbourhoods of Barcelona. The target is to serve people´s needs easily and help create social bonds.',
       link: 'https://swapskill-456e8.firebaseapp.com/'
     },
     uxavant: {
@@ -103,7 +103,7 @@ $(function() {
       title: 'Travelmate',
       tag: 'TRAVEL APP DESIGN DEVELOPMENT',
       detail:
-          'Travelmate is an app supporting sustainable tourism in Barcelona. Ari, the friendly chatbot that is the heart of the app, shows you around the hidden gems of the city while promoting an eco-friendly behaviour as well as respect for the local customs.',
+          'Travelmate is an app supporting sustainable tourism in Barcelona. Ari, the friendly chatbot, shows you around the hidden gems of the city while promoting an eco-friendly, respectable behaviour.',
       link: 'https://projects.invisionapp.com/share/WKM751QJTU7#/screens'
     },
   };
